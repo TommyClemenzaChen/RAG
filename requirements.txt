@@ -1,0 +1,7 @@
+pymupdf==1.19.6
+llama_index
+
+chromadb
+llama-index-embeddings-huggingface
+numpy>=1.18.5,<1.25.0
+fitz
