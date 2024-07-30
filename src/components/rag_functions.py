@@ -11,7 +11,6 @@ from dotenv import load_dotenv
 
 
 CHROMA_PATH = "src/data/chroma"
-api_key = os.getenv("OPENAI_API_KEY")
 
 load_dotenv()
 api_key = os.getenv("AIEA_OPENAI_KEY")
@@ -20,7 +19,7 @@ api_key = os.getenv("AIEA_OPENAI_KEY")
 # Used when we run the image
 # IMAGE_RUN = ???
 
-def load_vector_database(k = 3):
+def get_retriever(k = 3):
     
     db = chromadb.PersistentClient(path=CHROMA_PATH)
     chroma_collection = db.get_or_create_collection("chroma_db")

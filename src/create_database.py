@@ -1,8 +1,7 @@
 import os 
 import argparse
 import shutil
-# import fitz
-# from llama_index.readers.file.pymu_pdf.base import PyMuPDFReader
+
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core import Document, StorageContext, VectorStoreIndex
 from llama_index.vector_stores.chroma import ChromaVectorStore
