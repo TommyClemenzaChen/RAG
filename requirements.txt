@@ -1,6 +1,6 @@
 pymupdf==1.19.6
 llama_index
-
+dotenv
 chromadb
 llama-index-embeddings-huggingface
 numpy>=1.18.5,<1.25.0

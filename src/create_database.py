@@ -12,6 +12,7 @@ from llama_index.core import SimpleDirectoryReader
 from llama_index.core.schema import TextNode
 
 
+
 # You'll also need to encode other things like BM-25 and NER.
 
 CHROMA_PATH = "src/data/chroma"
@@ -24,7 +25,6 @@ def load_documents():
     return doc
 
 def split_documents_into_TextNodes(documents: list[Document]):
-
     text_parser = SentenceSplitter(
         chunk_size=600,
         chunk_overlap=0
@@ -42,10 +42,11 @@ def split_documents_into_TextNodes(documents: list[Document]):
         chunks = text_parser.split_text(page_text)
         text_chunks.extend(chunks)
         doc_idxs.extend([doc_idx] * len(chunks))
+    
 
     # Converting split nodes into TextNodes
     nodes = []
-    for idx, text_chunk in enumerate(chunks):
+    for idx, text_chunk in enumerate(text_chunks):
         node = TextNode(
             text=text_chunk,
         )
@@ -66,7 +67,7 @@ def add_to_database(nodes: list[TextNode]):
 
     # define embedding model
     embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
-
+    print(f"Nodes: {len(nodes)}")
     index = VectorStoreIndex(
         nodes,
         storage_context=storage_context,
