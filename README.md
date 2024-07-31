@@ -1,4 +1,4 @@
-# project_name RAG 
+# RAG project
 
 project_description: api for RAG
 
