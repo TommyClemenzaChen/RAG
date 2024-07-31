@@ -62,7 +62,7 @@ def query(retriever, query_text: str):
     return response
 
 if __name__ == "__main__":
-    retriever = load_vector_database()
+    retriever = get_retriever()
     response = query(retriever, "When are the office hours for galaxy design agency?")
     # print(response)
     
