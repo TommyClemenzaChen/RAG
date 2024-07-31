@@ -43,7 +43,7 @@ def query(retriever, query_text: str):
     for content in retrieved_content:
         context += content.text + "\n"
     
-    llm = OpenAI(api_key=api_key, model = "gpt-3.5-turbo")
+    llm = OpenAI(model = "gpt-3.5-turbo")
 
     prompt = PromptTemplate(
     "Context information is below.\n"
@@ -59,10 +59,10 @@ def query(retriever, query_text: str):
     
     response = llm.complete(formatted_prompt)
 
-    return response
+    return response.text
 
 if __name__ == "__main__":
     retriever = get_retriever()
-    response = query(retriever, "When are the office hours for galaxy design agency?")
-    # print(response)
+    response = query(retriever, "What is this research paper about?")
+    print(response)
     
