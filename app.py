@@ -19,9 +19,9 @@ def query_message():
         data = request.get_json()
         message = data.get('message')
         
-        logging.info("Message: ", message)
+        logging.info(f"Message: {message}")
         response = query(retriever, message)
-        logging.info("Response: ", response)
+        logging.info(f"Response: {response}")
         return jsonify({"response": response})
     except Exception as e:
         logging.error(f"Error: {e}")
@@ -32,4 +32,5 @@ def query_message():
 
 if __name__ == '__main__':
     port = 8000
-    app.run(port=port, debug=True)
+    # app.run(port=port, host ='0.0.0.0')
+    app.run(port = port, debug=True)
