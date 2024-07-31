@@ -3,3 +3,4 @@ chromadb
 llama-index-embeddings-huggingface
 numpy>=1.18.5,<1.25.0
 flask
+llama_index-vector_stores-chroma
