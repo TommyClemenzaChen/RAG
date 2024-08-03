@@ -1,0 +1,9 @@
+services:
+  rag-api:
+    image: rag:latest
+    env_file:
+      - .env 
+    working_dir: /app
+    command: bash
+    ports: 
+      - "8000:8000"
