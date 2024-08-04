@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 CHROMA_PATH = "src/data/chroma"
 
 load_dotenv()
-api_key = os.getenv("AIEA_OPENAI_KEY")
+api_key = os.getenv("OPENAI_API_KEY")
 
 
 # Used when we run the image
@@ -30,6 +30,7 @@ def get_retriever(k = 3):
     index = VectorStoreIndex.from_vector_store(
         vector_store,
         embedding_model = embed_model,
+        
     )
     retriever= index.as_retriever(similarity_top_k = k)
     
