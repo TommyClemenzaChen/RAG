@@ -1,6 +1,8 @@
 # RAG project
 
-project_description: api for RAG
+## System design overview:
+![image](https://github.com/user-attachments/assets/f4fc4426-e549-4da7-a788-d9ecddfa241f)
+
 
 ## Installation
 
