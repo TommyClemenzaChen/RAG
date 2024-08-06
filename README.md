@@ -36,7 +36,17 @@ Call the database script to convert all the pdfs into a vector database
 cd ../../../
 python src/create_database.py
 ```
+## Executing(Docker)
 
+Building images:
+```
+docker build --no-cache -t rag:latest .
+```
+
+Running: 
+```
+docker run -p 8000:8000 rag:latest   
+```
 
 ## Executing(local)
 
