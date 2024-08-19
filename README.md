@@ -14,7 +14,7 @@ cd RAG
 pip install -r requirements.txt
 ```
 
-## Documents for rag:
+## Creating database for retrieval(run before using the app):
 
 Creates a directory to store your data
 ```
