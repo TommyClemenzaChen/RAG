@@ -60,30 +60,3 @@ Just run:
 $ python app.py
 ```
 
-# IGNORE THE REST NOT FINSIHSED
-
-
-[To see the help message and usage instructions.
-
-## First run
-
-```bash
-project_name create-db   # run once
-project_name populate-db  # run once (optional)
-project_name add-user -u admin -p 1234  # ads a user
-project_name run
-```
-
-Go to:
-
-- Website: http://localhost:5000
-- Admin: http://localhost:5000/admin/
-  - user: admin, senha: 1234
-- API GET:
-  - http://localhost:5000/api/v1/product/
-  - http://localhost:5000/api/v1/product/1
-  - http://localhost:5000/api/v1/product/2
-  - http://localhost:5000/api/v1/product/3
-
-
-> **Note**: You can also use `flask run` to run the application.]: #
